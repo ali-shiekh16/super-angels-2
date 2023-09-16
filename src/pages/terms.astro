@@ -1,0 +1,349 @@
+---
+import TeamList from '../components/TeamList';
+import Layout from '../layouts/Layout.astro';
+import Section from '../components/Section.astro';
+import Button from '../components/Button.astro';
+import '../css/aos.css';
+import TextField from '../components/TextField.astro';
+import Textarea from '../components/Textarea.astro';
+import Tag from '../components/Tag.astro';
+import Card from '../components/Card.astro';
+import Slider from '../components/Slider';
+import CompanyCarousel from '../components/CompanyCarousel';
+
+---
+
+<Layout title='Superangels'>
+  <canvas></canvas>
+  <Section
+    heading={{
+      dataAos: 'fade-up',
+      text: 'Imprint',
+    }}
+    paragraphs={[
+      {
+        dataAos: 'fade-left',
+        dataAosDelay: '200',
+        heading: '',
+        text: 'Superangels Management GmbH; Thalkirchner Straße 56; 80337 Munich',
+      },
+      {
+        dataAos: 'fade-left',
+        dataAosDelay: '200',
+        heading: '',
+        text: 'Trade register: Handelsregister Amtsgerichts München, HRB 283677',
+      },
+      {
+        dataAos: 'fade-left',
+        dataAosDelay: '200',
+        heading: '',
+        text: 'Representatives: Superangels Management GmbH, in turn represented by its Managing Directors Franziska Majer, Alexander Brand and Florian Gottschaller, holding the sole power of representation, including the power to conclude transactions with themselves on their own behalf or as the authorised representative of a third party.',
+      },
+      {
+        dataAos: 'fade-left',
+        dataAosDelay: '200',
+        heading: '',
+        text: 'Regulatory agency: The responsible regulatory agency for superangels Management GmbH is the German Federal Financial Supervisory Authority (Bundesanstalt für Finanzdienstleistungsaufsicht – BaFin) under the BaFin-ID 10162103',
+      },
+      {
+        dataAos: 'fade-left',
+        dataAosDelay: '200',
+        heading: '',
+        text: 'Contact: info@super-angels.eu',
+      },
+    ]}
+    align='left'
+    sectionId='start'
+    sectionClass='section__2'
+  />
+  
+  <Section
+    heading={{
+      dataAos: 'fade-up',
+      text: ' ',
+    }}
+    paragraphs={[
+      {
+        dataAos: 'fade-right',
+        dataAosDelay: '200',
+        heading: ' ',
+        text: ' ',
+      },
+      ]}
+    align='left'
+    sectionId='blank'
+    sectionClass='section__2'
+  />
+
+  <Section
+    heading={{
+      dataAos: 'fade-up',
+      text: 'Privacy Policy',
+    }}
+    paragraphs={[
+      {
+        dataAos: 'fade-right',
+        dataAosDelay: '200',
+        heading: 'Latest update: August 2023',
+        text: 'Superangels Management GmbH (hereinafter “Superangels”, “we” or “us”), represented by its Managing Directors Franziska Majer, Alexander Brand and Florian Gottschaller operates the domain www.super-angels.eu (the “Website”).',
+      },
+      {
+        dataAos: 'fade-right',
+        dataAosDelay: '200',
+        heading: '',
+        text: 'Superangels protects the privacy of all website users and strictly complies with all applicable data protection provisions, including the European General Data Protection Regulation (Datenschutzgrundverordnung) (“GDPR“) and the German Telemedia Act (Telemediengesetz).',
+      },
+      {
+        dataAos: 'fade-right',
+        dataAosDelay: '200',
+        heading: '',
+        text: 'For any questions or requests regarding data protection, please contact us under info@super-angels.eu<',
+      },
+      {
+        dataAos: 'fade-right',
+        dataAosDelay: '200',
+        heading: '',
+        text: 'Regulatory agency: The responsible regulatory agency for superangels Management GmbH is the German Federal Financial Supervisory Authority (Bundesanstalt für Finanzdienstleistungsaufsicht – BaFin) under the BaFin-ID 10162103',
+      },
+      {
+        dataAos: 'fade-right',
+        dataAosDelay: '200',
+        heading: 'Processing of data',
+        text: 'Due to our statutory obligation under § 5 para. 3 of the German Telemedia Act (Telemediengesetz), our Website contains information which makes it possible to contact our company quickly in electronic form and to directly communicate with us. If you decide to contact us, for example via e-mail or via the contact form, the personal data you transmitted is automatically stored in order to process your request. The legal basis for such processing and storage is Art. 6 para. 1, lit. c) GDPR. Such personal data will not be transferred to third parties. It will only be stored as long as we need to deal with your request.',
+      },
+      {
+        dataAos: 'fade-right',
+        dataAosDelay: '200',
+        heading: 'Cookies',
+        text: 'Superangels uses so-called cookies on our websites. A cookie is a small text file sent from a website to your web browser. The cookie cannot identify you personally, but only the web browser that is installed on your computer and the web browser you use when visiting the webpage. Cookies save information from your web browser about your use of the website and is used to optimize your use of the website, e.g. to provide you with relevant and customised advertisement/marketing.',
+      },
+      {
+        dataAos: 'fade-right',
+        dataAosDelay: '200',
+        heading: '',
+        text: 'Superangels uses session cookies and permanent cookies. A session cookie is sent to your computer so that the webpages can function properly during your visit and is erased when you close down your web browser. The function of a session cookie is for example that it is activated when you return to a previously visited part of the website and thus facilitates your navigation on the website. A permanent cookie, on the other hand, is stored in your web browser and thus allows a web page to recognise your computers IP address even if you turn off your computer or log out between visits. The cookie is stored for up to two years and is then deleted. ',
+      },
+      {
+        dataAos: 'fade-right',
+        dataAosDelay: '200',
+        heading: '',
+        text: 'Furthermore, superangels uses third-party analytical and marketing cookies to investigate how to adapt and develop the information on Superangelss website in the best possible way. Analytical cookies collect information about how you use our website and are provided by e.g. Google Analytics and Optimizely. IP addresses are anonymised in Google Analytics, and the anonymised data is transmitted to and stored by Google on servers in the United States. Google may also transfer this information to third parties where required to do so by law, or where such third parties process the information on Googles behalf. Google will not associate your IP address with any other data held by Google. Marketing cookies collect personal information such as whether you are a new visitor or returning visitor. Collected information is used to evaluate the effectiveness of our marketing campaigns or to provide better targeting for marketing purposes.',
+      },
+      {
+        dataAos: 'fade-right',
+        dataAosDelay: '200',
+        heading: '',
+        text: 'Our legal basis for processing your personal data by using analytical and marketing cookies is your consent. This legal basis may be found in Article 6(1)(a) of the GDPR. You can easily refrain from allowing superangels websites to store cookies on your computer with a setting in your web browser, including blocking cookies or erasing any cookies stored on your computer. Please note that if you choose to not allow cookies, some functionality on the websites may cease to function properly and some services may not be provided. How you erase or change the settings for cookies is stated in the instructions to your web browser or in the utility function that usually is available in the web browser.',
+      },
+      {
+        dataAos: 'fade-right',
+        dataAosDelay: '200',
+        heading: 'Your Rights under GDPR',
+        text: 'In case of complaints, you may contact the competent data protection authority, the Bavarian Commissioner for data protection. You are not obliged to share any data with us. Under the GDPR, you are entitled to request which communication we process and have stored; withdraw your consent granted to us to use cookies (please see above for instructions); request which personal data of you superangels processes and stores; request us to correct the data we process about you, or – under the statutory requirements, complete your data; under the statutory requirements, request that we delete your data; under the statutory requirements, request that we restrict the processing of your data; receive – under the statutorily required preconditions – the data stored in a structured, common and machine-readable format.',
+      },
+      {
+        dataAos: 'fade-right',
+        dataAosDelay: '200',
+        heading: 'Right to Complaint',
+        text: 'Additionally, you have the right to lodge a complaint with the data protection supervisory authority if you think that the processing of your data violates data protection law. You may approach the authority competent for us (the Bavarian Commissioner for data protection, (https://www.datenschutz-bayern.de/) or any other authority which will forward the request.',
+      },
+    ]}
+    align='left'
+    sectionId='privacy'
+    sectionClass='section__3'
+  />
+
+  <Section
+  heading={{
+    dataAos: 'fade-up',
+    text: ' ',
+  }}
+  paragraphs={[
+    {
+      dataAos: 'fade-right',
+      dataAosDelay: '200',
+      heading: ' ',
+      text: ' ',
+    },
+    ]}
+  align='left'
+  sectionId='blank2'
+  sectionClass='section__4'
+/>
+
+  <Section
+  heading={{
+    dataAos: 'fade-up',
+    text: 'Terms of use',
+  }}
+  paragraphs={[
+    {
+      dataAos: 'fade-left',
+      dataAosDelay: '200',
+      heading: '',
+      text: 'Please read the following terms and conditions carefully. They govern your use of this website. By using this web site, you agree to be bound by these terms and conditions, as they may be modified by superangels from time-to-time and posted on this web site.',
+    },
+    {
+      dataAos: 'fade-left',
+      dataAosDelay: '200',
+      heading: '1. Copyrights and Other Intellectual Property',
+      text: 'Except as otherwise noted in this website, all information, documentation and other content posted on this website is the property of superangels. Without limiting the foregoing, the graphics, icons and overall appearance of this website are the property of superangels.',
+    },
+    {
+      dataAos: 'fade-left',
+      dataAosDelay: '200',
+      heading: '2. Links to other websites',
+      text: 'Periodically, links may be established between this website and one or more websites operated or content provided by third parties. For purposes of these terms of use, the term “link” includes both outlinks (hypertext links to external websites or content) and inlinks (hypertext links which draw material from other sources into this website).',
+    },
+    {
+      dataAos: 'fade-left',
+      dataAosDelay: '200',
+      heading: '',
+      text: 'Superangels has no control over any such other websites or their contents and will have no liability arising out of or related to such websites or their contents. The existence of any such links does not constitute an endorsement of such websites, the contents of the websites or the operators of the websites. Superangels is providing these links to you only as a convenience.',
+    },
+
+  ]}
+  align='left'
+  sectionId='terms'
+  sectionClass='section__5'
+  /> 
+
+</Layout>
+
+
+<style lang='scss'>
+  @use '../css/mixins';
+  @use '../css/variables' as vars;
+  .map-container {
+    margin: 25rem 0;
+    .map {
+      width: 100%;
+      height: 100%;
+      align-self: center;
+    }
+
+    .address-list {
+      margin-top: 2rem;
+
+      &__item {
+        margin: 0;
+        padding: 0;
+        font-weight: bold;
+        list-style: none;
+        &::before {
+          content: '⭐';
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+
+  .center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .text {
+    margin-bottom: 5rem;
+  }
+  canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  .core-team {
+    display: grid;
+    place-content: center;
+    height: 100%;
+    gap: 2rem;
+
+    &__img-wrapper {
+      width: 150px;
+      height: 150px;
+      background: lighten(vars.$color-primary, 25%);
+      padding: 1rem;
+      overflow: hidden;
+      border-radius: 50%;
+
+      @include mixins.min-width(medium) {
+        // margin: 1rem;
+      }
+    }
+    &__img {
+      // margin: 4rem auto;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      object-fit: contain;
+      filter: grayscale(100%);
+    }
+
+    @include mixins.min-width(medium) {
+      grid-template-columns: repeat(3, 1fr);
+
+      &__img {
+        display: block;
+        padding: 0;
+      }
+    }
+  }
+
+  .tag {
+    &-list {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+
+      @include mixins.min-width(medium) {
+        padding: 0 20rem;
+      }
+    }
+
+    &-list__item {
+      margin: 1rem 2rem;
+
+      @include mixins.min-width(medium) {
+        margin: 1rem 0;
+      }
+    }
+  }
+  .companies-list {
+    @include mixins.min-width(medium) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .contact {
+    @include mixins.min-width(medium) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    & > * {
+      padding: 15rem 5rem 0;
+    }
+  }
+
+  .cards-container {
+    @include mixins.min-width(medium) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+  }
+</style>
+
+
+<script src='../js/main.js'></script>
+<script src='https://unpkg.com/aos@2.3.1/dist/aos.js' is:inline></script>
+<script is:inline>
+  AOS.init();
+</script>

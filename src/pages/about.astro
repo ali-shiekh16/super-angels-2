@@ -1,0 +1,53 @@
+---
+import TeamList from '../components/TeamList';
+import Layout from '../layouts/Layout.astro';
+import Section from '../components/Section.astro';
+import Button from '../components/Button.astro';
+import '../css/aos.css';
+import TextField from '../components/TextField.astro';
+import Textarea from '../components/Textarea.astro';
+import Tag from '../components/Tag.astro';
+import Card from '../components/Card.astro';
+import Slider from '../components/Slider';
+import CompanyCarousel from '../components/CompanyCarousel';
+
+---
+
+<Layout title='About Us'>
+  {/*
+  <div class='team team--about'>
+    <h2 class='team__heading'>Core Team</h2>
+    <TeamList isCoreList={true} client:load />
+
+    <h2 class='team__heading'>All stars</h2>
+    <TeamList isCoreList={false} client:load />
+  </div>
+*/}
+
+  <Section
+  heading={{
+    dataAos: 'fade-up',
+    text: '',
+  }}
+  paragraphs={[
+    {
+      dataAos: 'fade-left',
+      dataAosDelay: '200',
+      heading: 'Our Mission Unveiled',
+      text: 'Embarking on an entrepreneurial journey, we, Franzi Majer, Alex Brand, and Florian Gottschaller,  united our passions to co-invest in pioneering tech start-ups. Our drive, coupled with an exceptional network of trusted Business Angels, unveiled an awe-inspiring flow of opportunities that demanded a leap forward. What commenced as friends co-investing soon evolved into the birth of "superangels," our emblematic Business Angel matching firm.',
+    },
+  ]}
+  align='left'
+  sectionId='start'
+  sectionClass='section__1'
+/>
+</section>
+
+  <style lang='scss'>
+    .team__heading {
+      text-align: center;
+      margin: 8rem auto;
+      text-transform: uppercase;
+    }
+  </style>
+</Layout>

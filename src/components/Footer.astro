@@ -1,0 +1,90 @@
+<footer class='footer'>
+  <div class='footer__logo'>
+    <p class='footer__copyright'>
+      © 2023 Superangles Management GmbH
+      <br />
+      All rights reserved
+      <br />
+      </a
+      >
+    </p>
+  </div>
+  <ul class='footer__list'>
+    <li class='footer__item'></li>
+    <li class='footer__item'> <a href="/terms/">Imrint, Terms & Privay Policy</a></li>
+    <li class='footer__item'></li>
+  </ul>
+  <div class='footer__icons'>
+    <a href='https://www.linkedin.com/company/super-angels/'>
+      <img class='footer__icon' src='/images/linkedin.svg' alt='' /></a
+    >
+    <a href='https://www.instagram.com/superangels_vc/'>
+      <img class='footer__icon' src='/images/insta.svg' alt='' /></a>
+  </div>
+</footer>
+
+<style lang='scss'>
+  @use '../css/mixins';
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    border-top: solid rgba(#fff, 0.2) 1px;
+    $filter-intensity: 50px;
+    backdrop-filter: blur($filter-intensity);
+    -webkit-backdrop-filter: blur($filter-intensity);
+
+    &__icon {
+      width: 40px;
+      height: 40px;
+      background: #fff;
+      border: solid #000 3px;
+      border-radius: 15px;
+      margin: 0 0.5rem;
+    }
+
+    &__item {
+      list-style: none;
+      margin: 2rem;
+      text-transform: uppercase;
+      font-size: 1.4rem;
+    }
+
+    &__copyright {
+      font-size: 1.5rem;
+    }
+
+    &__logo {
+      &-img {
+        width: 200px;
+        transform: translate(10px, 10px);
+      }
+
+      order: 1;
+      text-align: center;
+      margin: 1rem 0;
+
+      @include mixins.min-width(medium) {
+        order: 0;
+        text-align: left;
+      }
+    }
+
+    @include mixins.min-width(medium) {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 2rem;
+      align-items: center;
+
+      &__list {
+        display: flex;
+      }
+    }
+  }
+
+  .link {
+    border-bottom: solid 1px #fff;
+  }
+</style>

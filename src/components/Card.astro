@@ -1,0 +1,65 @@
+---
+export interface Props {
+  title?: string;
+  text?: string;
+  href_1?: string;
+  imgPath?: string;
+}
+
+const { href_1, title, text, imgPath } = Astro.props as Props;
+---
+
+<article class='card'>
+  <header class='card__header'>
+    <img class='card__img' src={imgPath} alt='' />
+  </header>
+  <main class='card__body'>
+    <h2 class='card__heading'>{title || ''}</h2>
+    <p class='card__text'>{text || ''}</p>
+    <a href={href_1 || '#'} target="_blank" class='card__link'>Read More »</a>
+  </main>
+</article>
+
+<style lang='scss'>
+  @use '../css/variables' as vars;
+  .card {
+    background: lighten(vars.$color-bg, 10%);
+    border-radius: 15px;
+    cursor: pointer;
+    margin-bottom: 2rem;
+
+    &__body {
+      padding: 2rem;
+      text-align: left;
+      font-family: inherit;
+    }
+
+    &__heading,
+    &__link {
+      text-decoration: bold;
+    }
+
+    &__heading,
+    &__text {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      line-height: 120%;
+    }
+    &__heading {
+      font-size: 1.5rem;
+      font-weight: bold;
+      line-height: 80%;
+    }
+
+    &__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &__link {
+      //text-transform: uppercase;
+      font-size: 1.5rem;
+    }
+  }
+</style>

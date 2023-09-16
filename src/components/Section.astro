@@ -1,0 +1,96 @@
+---
+interface Text {
+  dataAos: string;
+  dataAosDelay: string;
+  text: string;
+  heading: string;
+}
+
+interface Heading {
+  dataAos: string;
+  text: string;
+}
+
+interface Section {
+  heading: Heading;
+  paragraphs: Text[];
+  align: string;
+  sectionId: string;
+  sectionClass: string;
+}
+
+const { heading, paragraphs, align, sectionId, sectionClass } =
+  Astro.props as Section;
+---
+
+<section
+  class={`section ${
+    align === 'center' ? 'section--center' : ''
+  } ${sectionClass}`}
+  id={sectionId}
+>
+  {align === 'right' && <div class='empty' />}
+  <div class='content'>
+    <h2 data-aos={heading.dataAos}>{heading.text}</h2>
+    {
+      paragraphs.map(p => (
+        <>
+          <h3 class='section__sub-heading' data-aos={heading.dataAos}>
+            {p.heading}
+          </h3>
+          <p class='text' data-aos={p.dataAos} data-aos-delay={p.dataAosDelay}>
+            {p.text}
+          </p>
+        </>
+      ))
+    }
+    <slot name='content' />
+  </div>
+  <slot />
+</section>
+
+<style lang='scss'>
+  @use '../css/variables' as vars;
+  @use '../css/mixins';
+
+  .section {
+    min-height: 100vh;
+    padding: 2rem;
+
+    &__sub-heading {
+      /* font-size: 3rem; */
+      margin-bottom: 2rem;
+    }
+
+    .text {
+      margin-bottom: 5rem;
+    }
+
+    .empty {
+      background: #1c2543;
+    }
+  }
+
+  @include mixins.min-width(medium) {
+    .section {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      margin: 0 5rem;
+
+      &__5 {
+        justify-items: start;
+        align-items: start;
+      }
+
+      &--center {
+        display: block;
+        text-align: center;
+      }
+
+      .empty {
+        display: block;
+      }
+    }
+  }
+</style>

@@ -1,0 +1,549 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Section from '../components/Section.astro';
+import Button from '../components/Button.astro';
+import '../css/aos.css';
+import TextField from '../components/TextField.astro';
+import Textarea from '../components/Textarea.astro';
+import Tag from '../components/Tag.astro';
+import Card from '../components/Card.astro';
+import Slider from '../components/Slider';
+import CompanyCarousel from '../components/CompanyCarousel';
+import NewCompanyCarousel from '../components/NewCompanyCarousel';
+
+const tags = [
+  'AI / ML',
+  'Metaverse',
+  'Fintech / crypto',
+  'Healthcare tech',
+  'Cybersecurity',
+  'Web3',
+  'Gen Z shopping',
+  'climate tech',
+];
+---
+
+<Layout title='Superangels'>
+  <canvas></canvas>
+
+  {/* Mission */}
+  <Section
+    heading={{}}
+    paragraphs={[]}
+    align='left'
+    sectionId='mission'
+    sectionClass='section__1'
+  >
+    <div slot='content'>
+      <h3 class='section__sub-heading' data-aos='fade-up'>Our Mission</h3>
+      <p class='text' data-aos='fade-left' data-aos-delay={200}>
+        We are passionate and experienced entrepreneurs and we discovered our
+        passion to co-invest in pioneering tech start-ups. Our excitement about
+        entrepreneurship and innovation, coupled with an exceptional network of
+        trusted business angels, unveiled some exciting deal flow. What
+        commenced as friends co-investing evolved into the birth of superangels
+        our business angel matching firm.
+      </p>
+    </div>
+  </Section>
+
+  {/* Investment Approach */}
+  <Section
+    heading={{
+      dataAos: 'fade-up',
+      text: '',
+    }}
+    paragraphs={[
+      {
+        dataAos: 'fade-left',
+        dataAosDelay: '200',
+        heading: 'Our Investment Approach',
+        text: 'Our unique investment strategy revolves around collaborating with a group of carefully selected business angels – our superangels. Each angel within our network stands as an authority in their specific industry, their investment choices are underpinned by profound industry insights. We match all of their investments in pre-seed/seed ventures across the tech landscape – spanning all geographies and topics like climate tech, AI, deep tech, and SaaS. Our focus is on the early stages, but we keep a reserve for subsequent investments in proven champions – both in partnership with our angels and autonomously.',
+      },
+    ]}
+    align='right'
+    sectionId='section-2'
+    sectionClass='section__2'
+  />
+
+  {/* win-win */}
+  <Section
+    heading={{
+      dataAos: 'fade-up',
+      text: '',
+    }}
+    paragraphs={[
+      {
+        dataAos: 'fade-left',
+        dataAosDelay: '200',
+        heading: 'A Win-Win for All',
+        text: 'By following the investments of our business angels – we call them allstars –  the combined financial strength bolsters their sway during investment negotiations and provides additional liquidity for startups. Our consideration for both the expertise of our allstars and their operational/administrative involvement is reflected in an unusual commitment: 30% of our fund carry is allocated to the allstars, amplifying their potential for investment returns and diversification. This approach grants us access to an unparalleled dealflow, enabling investments in the most promising tech startups worldwide. In doing so, risk is mitigated, startups are equipped with more liquidity and returns are optimized, benefiting both us, our trusted Limited Partners and the companies we invest in.',
+      },
+    ]}
+    align='left'
+    sectionId='section_3'
+    sectionClass='section__3'
+  />
+
+  {/* cherry picking */}
+  <Section
+    heading={{
+      dataAos: 'fade-up',
+      text: 'It is cherry-picking the most scalable way!',
+    }}
+    paragraphs={[
+      {
+        dataAos: 'fade-right',
+        dataAosDelay: '200',
+        heading: 'A Belief in Transformative Futures',
+        text: 'We believe in the power of exceptional entrepreneurs to shape a brighter tomorrow. Guided by this conviction, we take great joy in nurturing their journey and in supporting great companies, that provide positive impact in many regards. ',
+      },
+
+      {
+        dataAos: 'fade-left',
+        dataAosDelay: '200',
+        heading: 'Embark on a Journey of Excellence',
+        text: 'Join us as we invest in the most promising tech startups across the global landscape!',
+      },
+    ]}
+    align='right'
+    sectionId='section-4'
+    sectionClass='section__4'
+  />
+
+  {/* core team */}
+  <Section
+    heading={{
+      dataAos: 'fade-up',
+      text: 'Our Core Team',
+    }}
+    paragraphs={[
+      {
+        dataAos: 'fade-left',
+        dataAosDelay: '200',
+        heading: '',
+        text: 'Being entrepreneurs at heart, we (Franzi Majer, Florian Gottschaller, Alex Brand) started co-investing in tech start-ups together. Thanks to our amazing network of trusted Business Angels, the dealflow was so impressive, we just knew we had to take it to the next level. So what started as co-investing among friends, developed into our Business Angel matching firm “superangels“.',
+      },
+    ]}
+    align='left'
+    sectionId='core'
+    sectionClass='section__5'
+  >
+    <div class='core-team'>
+      <div class='core-team__img-wrapper'>
+        <a
+          href='https://www.linkedin.com/in/franzi-majer-03b8257a/'
+          target='_blank'
+        >
+          <img
+            src='/images/team/8.png'
+            alt='Franziska Majer'
+            class='core-team__img'
+          /></a
+        >
+      </div>
+
+      <div class='core-team__img-wrapper'>
+        <a
+          href='https://www.linkedin.com/in/florian-gottschaller-24a61840/'
+          target='_blank'
+        >
+          <img
+            src='/images/team/5.png'
+            alt='Florian Gottschaller'
+            class='core-team__img'
+          /></a
+        >
+      </div>
+
+      <div class='core-team__img-wrapper'>
+        <a href='https://www.linkedin.com/in/brandalexander/' target='_blank'>
+          <img
+            src='/images/team/3.png'
+            alt='Alexander Brand'
+            class='core-team__img'
+          /></a
+        >
+      </div>
+    </div>
+
+    {
+      /* 
+    <Button
+      href='#team'
+      variant='primary'
+      aos='zoom-in'
+      aosDelay='200'
+      text='See all Stars'
+      block={false}
+    />
+    */
+    }
+  </Section>
+
+  {/* Allstars */}
+  <Section
+    heading={{
+      dataAos: 'fade-up',
+      text: 'Elevating our Investment Strategy with our Allstars',
+    }}
+    paragraphs={[
+      {
+        dataAos: 'fade-left',
+        dataAosDelay: '100',
+        heading: 'Discover the Power of superangels',
+        text: 'At superangels, we believe in the power of the swarm intelligence from the top performers of the business angel industry, uniting to become the force of superangels. Together, we  boast great capabilities to fuel investments in top tech companies.',
+      },
+      {
+        dataAos: 'fade-right',
+        dataAosDelay: '100',
+        heading: 'Unparalleled Insights for Informed Investment Choices',
+        text: 'Our approach is rooted in the expertise of tech industry experts, ensuring sharp investment decisions. Our allstar selection process included over 100 business angels and their investment portfolios, resulting in a selected group of 20 exceptional personalities. Each member of our network boasts specialized industry proficiency — whether it is AI/ML, Fintech/Crypto, Climate Tech, HR-Tech, Healthcare, and more. ',
+      },
+      {
+        dataAos: 'fade-left',
+        dataAosDelay: '100',
+        heading: 'Collaboration for Pre-Seed/Seed Ventures',
+        text: 'Our collaboration with these 20 allstars, embraces a "no questions asked" approach that eradicates "principal-agent" dynamics. This compromise can be observed when a group of investment managers in a typical fund campaigns for support for “their deals”. Our approach empowers the most independent investment decisions. The allstars invest their personal funds after a comprehensive due diligence, and we wholeheartedly endorse their expert decisions.',
+      },
+      {
+        dataAos: 'fade-right',
+        dataAosDelay: '100',
+        heading: 'Strategically Mitigating Risk, Amplifying Returns',
+        text: 'Our methodology effectively reduces risk and optimizes returns. By relying on the expertise of our allstars, we have crafted a strategy that leverages their deep industry insights and independent judgement.  We empower our proprietary allstar-investment team to make the most valuable investment decision, enabling an unusually large number of investments. Our goal is to get to 120-150 investments with our first fund. This high number of investments combined with the most valuable investment decision by our allstars mitigates risk very effectively. ',
+      },
+    ]}
+    align='center'
+    sectionId='team'
+    sectionClass='section__6'
+  >
+    <div class='center'>
+      <ul class='tag-list'>
+        {
+          tags.map((tag, index) => (
+            <li class='tag-list__item'>
+              <Tag title={tag} bordered={index !== tags.length - 1} />
+            </li>
+          ))
+        }
+      </ul>
+      <p style='margin: 4rem 3rem 8rem'>
+        We partner with these allstars and match their tickets for pre-seed/seed
+        investments. Our model eliminates “principal-agent” issues by operating
+        without employed managers to ensure independent investment decision.
+        This strategy effectively minimizes risk and maximizes returns!
+      </p>
+    </div>
+  </Section>
+  <h1>Our Allstars</h1>
+</Layout>
+
+<Slider client:load />
+
+{/* for spacing */}
+<Section
+  heading={{
+    dataAos: 'fade-up',
+    text: '  ',
+  }}
+  paragraphs={[
+    {
+      dataAos: 'fade-left',
+      dataAosDelay: '100',
+      heading: '',
+      text: '',
+    },
+  ]}
+  align='center'
+  sectionId='section-7'
+  sectionClass='section__7'
+/>
+
+{/* Hall of fame */}
+<Section
+  heading={{
+    dataAos: 'fade-up',
+    text: 'Welcome to our Hall of Fame!',
+  }}
+  paragraphs={[
+    {
+      dataAos: 'fade-left',
+      dataAosDelay: '100',
+      heading: '',
+      text: 'With a historical/investment portfolio featuring over 350 companies, our superangels team has a remarkable investment track record. Our business angel selection process included a thorough performance analysis of past investments.',
+    },
+    {
+      dataAos: 'fade-left',
+      dataAosDelay: '100',
+      heading: 'A Distinguishing Portfolio Performance: 5.9x ROI at Exit',
+      text: 'Our combined portfolios average return is truly exceptional, boasting an impressive multiple of 5.9x for those companies that have already completed their journey. This figure includes all underperformers and write-offs. ',
+    },
+    {
+      dataAos: 'fade-left',
+      dataAosDelay: '100',
+      heading: 'Experience Our Unparalleled Investment Approach',
+      text: 'What sets us apart is our unique and scalable investment strategy. We align ourselves with top-tier business angels, mirroring all of their future investments. ',
+    },
+  ]}
+  align='center'
+  sectionId='companies'
+  sectionClass='section__8'
+>
+  <h2>Historic</h2>
+  <CompanyCarousel client:load />
+
+  <h2>New</h2>
+  <NewCompanyCarousel client:load />
+</Section>
+
+{/* for spacing */}
+<Section
+  heading={{
+    dataAos: 'fade-up',
+    text: '  ',
+  }}
+  paragraphs={[
+    {
+      dataAos: 'fade-left',
+      dataAosDelay: '100',
+      heading: '',
+      text: '',
+    },
+  ]}
+  align='center'
+  sectionId='section-9'
+  sectionClass='section__9'
+/>
+
+{/* News */}
+<Section
+  heading={{
+    dataAos: 'fade-up',
+    text: 'Our News',
+  }}
+  paragraphs={[
+    {
+      dataAos: 'fade-left',
+      dataAosDelay: '100',
+      text: '',
+    },
+  ]}
+  align='center'
+  sectionId='news'
+  sectionClass='section-10'
+>
+  <div class='cards-container'>
+    <Card
+      title='💰 Deal alert 🚀 '
+      imgPath='/images/news-deal6.jpeg'
+      text='Celebrating our investment #6: Demoboost! 🚀'
+      href_1='https://www.linkedin.com/feed/update/urn:li:activity:7100802036446715904/'
+    />
+
+    <Card
+      title='💰 Deal alert 🚀'
+      imgPath='/images/news-deal2.jpeg'
+      text='Congratulations to Doctorflix for raising €2M!'
+      href_1='https://www.linkedin.com/feed/update/urn:li:activity:7079404153910763521/'
+    />
+
+    <Card
+      title='💰 Deal alert 🚀'
+      imgPath='/images/news-deal1.jpeg'
+      text='Our first official Matching Investment: FarmAct GmbH'
+      href_1='https://www.linkedin.com/feed/update/urn:li:activity:7067813723561680896/'
+    />
+
+    <Card
+      title='💥Ready for takeoff'
+      imgPath='/images/news-launch.png'
+      text='Our superangels launch event 🚀'
+      href_1='https://www.linkedin.com/feed/update/urn:li:activity:7064647204082200576'
+    />
+
+    <Card
+      title='Curious how it all started?'
+      imgPath='/images/news-founding.jpeg'
+      text='Here comes our superangels founding story 🚀'
+      href_1='https://www.linkedin.com/feed/update/urn:li:activity:7057725421513003008'
+    />
+  </div>
+</Section>
+
+{
+  /* Contact
+  <section class='section contact' id='contact'>
+    <div class='contact__details'>
+      <h2 class='contact__heading'>Get in Touch</h2>
+      <p class='contact__text'>Leave a message</p>
+      <form class='contact__form'>
+        <TextField name='name' label='Name' />
+        <TextField name='email' label='Email' />
+        <Textarea name='Message' label='Message' />
+
+        <Button
+          href='#'
+          variant='primary'
+          aos='zoom-in'
+          aosDelay='200'
+          text='Send'
+          block={true}
+        />
+      </form>
+    </div>
+*/
+}
+
+{
+  /* 
+    <div class='map-container'>
+      <iframe
+        class='map'
+        src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2663.1031422458827!2d11.558189887714091!3d48.127534277722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479ddf5b6c6a7957%3A0x1fb82ac8dfec3c33!2sThalkirchner%20Str.%2056%2C%2080337%20M%C3%BCnchen%2C%20Germany!5e0!3m2!1sen!2s!4v1689536619092!5m2!1sen!2s'
+        style='border:0;'
+        allowfullscreen=''
+        loading='lazy'
+        referrerpolicy='no-referrer-when-downgrade'></iframe>
+      <ul class='address-list'>
+        <li class='address-list__item'>7517 Comstock Ln, Darien, IL, 60561</li>
+        <li class='address-list__item'>(630) 663-1232, (865) 767-2927</li>
+      </ul>
+    </div>
+    */
+}
+
+<style lang='scss'>
+  @use '../css/mixins';
+  @use '../css/variables' as vars;
+  .map-container {
+    margin: 25rem 0;
+    .map {
+      width: 100%;
+      height: 100%;
+      align-self: center;
+    }
+
+    .address-list {
+      margin-top: 2rem;
+
+      &__item {
+        margin: 0;
+        padding: 0;
+        font-weight: bold;
+        list-style: none;
+        &::before {
+          content: '⭐';
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+
+  .center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .text {
+    margin-bottom: 5rem;
+  }
+  canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  .core-team {
+    display: grid;
+    place-content: center;
+    height: 100%;
+    gap: 2rem;
+
+    &__img-wrapper {
+      width: 150px;
+      height: 150px;
+      background: lighten(vars.$color-primary, 0%);
+      padding: 1rem;
+      overflow: hidden;
+      border-radius: 50%;
+
+      @include mixins.min-width(medium) {
+        // margin: 1rem;
+      }
+    }
+    &__img {
+      // margin: 4rem auto;
+      width: 120%;
+      height: 120%;
+      object-fit: cover;
+
+      object-fit: contain;
+      filter: grayscale(100%);
+    }
+
+    @include mixins.min-width(medium) {
+      grid-template-columns: repeat(3, 1fr);
+
+      &__img {
+        display: block;
+        padding: 0;
+      }
+    }
+  }
+
+  .tag {
+    &-list {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+
+      @include mixins.min-width(medium) {
+        padding: 0 20rem;
+      }
+    }
+
+    &-list__item {
+      margin: 1rem 2rem;
+
+      @include mixins.min-width(medium) {
+        margin: 1rem 0;
+      }
+    }
+  }
+  .companies-list {
+    @include mixins.min-width(medium) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .contact {
+    @include mixins.min-width(medium) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    & > * {
+      padding: 15rem 5rem 0;
+    }
+  }
+
+  .cards-container {
+    @include mixins.min-width(medium) {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 2rem;
+    }
+  }
+</style>
+
+<script src='../js/main.js'></script>
+<script src='https://unpkg.com/aos@2.3.1/dist/aos.js' is:inline></script>
+<script is:inline>
+  AOS.init();
+</script>

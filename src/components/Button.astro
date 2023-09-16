@@ -1,0 +1,48 @@
+---
+interface Button {
+  variant: string;
+  aosDelay: string;
+  aos: string;
+  text: string;
+  href: string;
+  block?: boolean;
+}
+
+const { href, variant, aos, aosDelay, text, block } = Astro.props as Button;
+---
+
+<a
+  href={href}
+  class={`btn btn--${variant} btn--${block ? 'block' : ''}`}
+  data-aos-delay={aosDelay}
+  data-aos={aos}
+>
+  {text}
+</a>
+
+<style lang='scss'>
+  @use '../css/variables' as vars;
+
+  .btn {
+    font-size: 2rem;
+    text-align: center;
+    display: inline-block;
+
+    border-radius: 5px;
+
+    text-transform: uppercase;
+    padding: 1.5rem 3rem;
+    color: #fff;
+    text-decoration: none;
+
+    margin-top: 3rem;
+
+    &--primary {
+      background: vars.$color-primary;
+    }
+
+    &--block {
+      width: 100%;
+    }
+  }
+</style>

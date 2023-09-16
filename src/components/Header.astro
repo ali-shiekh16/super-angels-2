@@ -1,0 +1,70 @@
+---
+import Navbar from './Navbar.astro';
+---
+
+<header class='header'>
+  <div class='header__logo'>
+    <span class='header__logo-text'>
+      <a href='/index.html'>
+        <img class='header__logo-img' src='/images/logo-light.png' alt='' />
+      </a>
+    </span>
+    <span class='header__menu-bar' id='nav-toggle-button'> |||</span>
+  </div>
+  <Navbar />
+</header>
+
+<style lang='scss'>
+  @use '../css/variables' as vars;
+  @use '../css/mixins';
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    $filter-intensity: 50px;
+    backdrop-filter: blur($filter-intensity);
+    -webkit-backdrop-filter: blur($filter-intensity);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+
+    &__menu-bar {
+      transform: rotate(90deg);
+      cursor: pointer;
+    }
+
+    &__logo {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      text-align: left;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    &__logo-img {
+      width: 200px;
+      transform: translate(10px, 10px);
+    }
+
+    @include mixins.min-width(medium) {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 2rem;
+      align-items: center;
+
+      .header__logo {
+        width: auto;
+      }
+
+      &__menu-bar {
+        display: none;
+      }
+    }
+  }
+</style>

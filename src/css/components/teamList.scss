@@ -1,0 +1,16 @@
+@use '../mixins';
+
+.team {
+  &__list {
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    cursor: pointer;
+
+    @include mixins.min-width(medium) {
+      grid-template-columns: repeat(4, 1fr);
+      padding: 0 15rem;
+    }
+  }
+}

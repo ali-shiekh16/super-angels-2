@@ -1,0 +1,38 @@
+---
+interface Props {
+  title: string;
+  bordered: boolean;
+}
+
+const { title, bordered = false } = Astro.props as Props;
+---
+
+<div class=`tag ${!bordered && 'tag__no-border'}`>
+  <img src='/images/check.png' class='tag__check' />
+  <p class='tag__title'>{title}</p>
+</div>
+
+<style lang='scss'>
+  @use '../css/variables' as vars;
+
+  .tag {
+    text-transform: uppercase;
+    color: vars.$color-body;
+    border-right: solid vars.$color-body 1px;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__no-border {
+      border: none;
+    }
+
+    &__check {
+      width: 25px;
+      height: 25px;
+      margin-right: 1rem;
+      transform: translateY(-0.8rem);
+    }
+  }
+</style>

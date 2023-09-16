@@ -1,0 +1,38 @@
+@use '../variables' as vars;
+
+.team {
+  z-index: 1;
+
+  &__card,
+  &__img {
+    transition: ease all 0.3s;
+  }
+
+  &__card {
+    display: flex;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    transform: scale(0.9);
+    position: relative;
+    cursor: pointer;
+    //background: lighten(vars.$color-dark, 25%);
+  }
+
+  &__img-wrapper {
+    overflow: hidden;
+    border-radius: 50%;
+    background: lighten(vars.$color-primary, 0%);
+
+    width: 150px; //150px;
+    height: 150px; //150px;
+    padding: 1rem;
+  }
+
+  &__img {
+    width: 120%;
+    height: 120%;
+    object-fit: contain; // cover
+    filter: grayscale(100%);
+  }
+}
